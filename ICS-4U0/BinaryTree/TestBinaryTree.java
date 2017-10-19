@@ -1,12 +1,18 @@
+/* Madhi Nagarajan, 614386
+ * ICS-4UE
+ * Mr. Dutton
+ */
 
 public class TestBinaryTree {
 
 	public static void main(String[] args) {
 		
-		
+		//creation of new binary tree
 		MyBinaryTree theTree = new MyBinaryTree();
 		StudentInfo someStudent; 
-				
+		
+		//students' data entered below
+		
 		someStudent = new StudentInfo (11, "Elmer", "Fudd");
 		theTree.addToTree(theTree.getRoot(), someStudent);
 		
@@ -34,6 +40,7 @@ public class TestBinaryTree {
 		someStudent = new StudentInfo (12, "Miss", "Prissy");
 		theTree.addToTree(theTree.getRoot(), someStudent);
 		
+		//output of the traversals
 		System.out.println("Binary Tree Traversal of Data");
 		System.out.println("Preorder: ");
 		theTree.preOrder(theTree.getRoot());

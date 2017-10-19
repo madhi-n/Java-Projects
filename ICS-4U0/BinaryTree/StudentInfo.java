@@ -1,26 +1,31 @@
+/* Madhi Nagarajan, 614386
+ * ICS-4UE
+ * Mr. Dutton
+ */
+
 
 public class StudentInfo {
 	  
 	//Attributes
 	
 	private int studentNum;
-	String firstName,lastName;
-	private StudentInfo leftChild; // Points at the left of the binary tree. Value is null if no number on the left
-	private StudentInfo rightChild; // Points at the right of the binary tree. Value is null if no number on the right
+	String firstName,lastName; 
+	private StudentInfo leftChild, rightChild; 
+	// leftChild points at the left of binary tree, rightChild points at the right of binary tree
+	//its value is null if there is no number on the left/right
 
 
-// CONSTRUCTORS
-
-public StudentInfo(int studentNum, String firstName, String lastName){
-	 firstName = null;
-     lastName = null;
-     leftChild = null;
-     rightChild = null;
-     
-     this.studentNum = studentNum;
+	//Constructors
+	
+	public StudentInfo(int studentNum, String firstName, String lastName){
+		firstName = null;
+		lastName = null;
+		this.studentNum = studentNum;
 }
 
 
+	//Getter and Setter methods
+	
 	public StudentInfo getLeft() {
 		return this.leftChild;	
 	}
