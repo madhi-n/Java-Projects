@@ -6,19 +6,19 @@ public class TestHashTable {
            MyHashTable newTable = new MyHashTable(3);
                            
            EmployeeInfo someEmployee = new PartTimeEmployee (13, "Bugs", "Bunny", 0, 2, 0.14, 12.5, 20.0, 30.0);
-           newTable.addEmployee(someEmployee);
+           newTable.addToTable(someEmployee);
            
            EmployeeInfo someEmployee2 = new FullTimeEmployee (24, "Foghorn", "Leghorn", 0, 2, 0.51,50000.0);
-           newTable.addEmployee(someEmployee2);
+           newTable.addToTable(someEmployee2);
            
            EmployeeInfo someEmployee3 = new EmployeeInfo (11, "Daffy", "Duck", 0, 2, 0.25);
-           newTable.addEmployee(someEmployee3);
+           newTable.addToTable(someEmployee3);
            
            EmployeeInfo someEmployee4 = new EmployeeInfo (9, "Sylvester", "Cat", 1, 2, 0.4);
-           newTable.addEmployee(someEmployee4);
+           newTable.addToTable(someEmployee4);
            
            EmployeeInfo someEmployee5 = new EmployeeInfo (18, "Lola", "Bunny", 1, 2, 0.15);
-           newTable.addEmployee(someEmployee5);
+           newTable.addToTable(someEmployee5);
            
            
            
@@ -26,14 +26,13 @@ public class TestHashTable {
            
            
            
-           newTable.displayContents();
+           newTable.printTable();
+           System.out.println("Found: " );
+           EmployeeInfo empSearch = newTable.searchByEmployeeNumber(13);
            
-           int empSearch = newTable.searchByEmployeeNumber(9);
-           System.out.println("\nAn Employee is being removed in bucket " + empSearch);  
-           
-           EmployeeInfo empDelete = newTable.removeEmployee(9);         
-           System.out.println("  " + empDelete);
-         
+           System.out.println("Removing: ");
+           EmployeeInfo empDelete = newTable.removeEmployee(18);         
+                    
            
         }
 
